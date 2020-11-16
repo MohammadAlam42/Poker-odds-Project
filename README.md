@@ -1,2 +1,2 @@
 # Poker-odds-Project
-This is a simple java program that takes user input for the current cards of the four players as well as the community cards. It then asks which card you want to draw next and tells you the chance of drawing it from the remaining deck.
+This is a simple java program that takes user input for the current cards of the four players as well as the community cards. It then asks which card you want to draw next and tells you the chance of drawing it from the remaining deck. Cards are represented by their value(E.x: 2,3,4,J,K,Q,A) followed by the first letter setter of their suit(h for hearts, c for clubs, d for diamonds, s for spades).
