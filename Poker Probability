@@ -1,11 +1,10 @@
 package PokerProbability;
 
 
+
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-
 
 
 
@@ -39,10 +38,10 @@ public class Main {
        
        
       
-     for(int i=0;i<4;i++) {
+     for(int i=0;i<2;i++) {
          
        
-       System.out.print("1st/2nd/3rd/4th card of player one?");
+       System.out.print("1st/2nd card of player one?");
        playeronecards.add(in.next());
    
     
@@ -56,17 +55,17 @@ public class Main {
        
        Scanner in2= new Scanner(System.in);
        
-        for(int i=0;i<4;i++) {
+        for(int i=0;i<2;i++) {
          
        
-       System.out.print("1st/2nd/3rd/4th card of player two?");
+       System.out.print("1st/2nd card of player two?");
        playertwocards.add(in2.next());
    
     
    }    
      
      
-      System.out.println("The hand of player one is:" +playertwocards); 
+      System.out.println("The hand of player two is:" +playertwocards); 
        
        
    
@@ -75,10 +74,10 @@ public class Main {
        
        Scanner in3= new Scanner(System.in);
        
-        for(int i=0;i<4;i++) {
+        for(int i=0;i<2;i++) {
          
        
-       System.out.print("1st/2nd/3rd/4th card of player three?");
+       System.out.print("1st/2nd card of player three?");
        playerthreecards.add(in3.next());
    
     
@@ -94,10 +93,10 @@ public class Main {
        
        Scanner in4= new Scanner(System.in);
        
-        for(int i=0;i<4;i++) {
+        for(int i=0;i<2;i++) {
          
        
-       System.out.print("1st/2nd/3rd/4th card of player four?");
+       System.out.print("1st/2nd card of player four?");
        playerfourcards.add(in4.next());
    
     
@@ -184,7 +183,7 @@ public class Main {
      
       double ChanceOfDrawing;
     
-      ChanceOfDrawing = 100*(NumberOfDesiredCardsLeft/32);
+      ChanceOfDrawing = 100*(NumberOfDesiredCardsLeft/40);
       
       System.out.printf("The chance of drawing your desired card %.2f percent",ChanceOfDrawing);
       
@@ -197,4 +196,13 @@ public class Main {
     } 
 
 }
+        
+    
+
+
+
+
+    
+    
+
         
