@@ -1,0 +1,200 @@
+package PokerProbability;
+
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
+
+
+
+    
+   
+ 
+
+
+public class Main {
+
+   
+    
+    
+    /**
+     * @param args the command line arguments
+     */ public static void main(String[] args) {
+        
+     ArrayList<String> allcards=new ArrayList<String>(
+    
+    Arrays.asList("2c","3c","4c","5c","6c","7c","8c","9c","10c","Jc","Qc","Kc","Ac","2h","3h","4h","5h","6h","7h","8h","9h","10h","Jh","Qh","Kh","Ah","2s","3s","4s","5s","6s","7s","8s","9s","10s","As","Js","Qs","Ks","As","2d","3d","4d","5d","6d","7d","8d","9d","10d","Jd","Qd","Kd","Ad"));
+     
+    
+     
+      
+      
+      
+      ArrayList<String> playeronecards=new ArrayList<String>();
+      
+       Scanner in=new Scanner(System.in);
+       
+       
+       
+      
+     for(int i=0;i<4;i++) {
+         
+       
+       System.out.print("1st/2nd/3rd/4th card of player one?");
+       playeronecards.add(in.next());
+   
+    
+   }    
+     
+     
+      System.out.println("The hand of player one is:" +playeronecards); 
+       
+   
+       ArrayList<String> playertwocards=new ArrayList<String>();
+       
+       Scanner in2= new Scanner(System.in);
+       
+        for(int i=0;i<4;i++) {
+         
+       
+       System.out.print("1st/2nd/3rd/4th card of player two?");
+       playertwocards.add(in2.next());
+   
+    
+   }    
+     
+     
+      System.out.println("The hand of player one is:" +playertwocards); 
+       
+       
+   
+     
+       ArrayList<String> playerthreecards=new ArrayList<String>();
+       
+       Scanner in3= new Scanner(System.in);
+       
+        for(int i=0;i<4;i++) {
+         
+       
+       System.out.print("1st/2nd/3rd/4th card of player three?");
+       playerthreecards.add(in3.next());
+   
+    
+   }    
+     
+     
+      System.out.println("The hand of player three is:" +playerthreecards);  
+   
+      
+      
+      
+       ArrayList<String> playerfourcards=new ArrayList<String>();
+       
+       Scanner in4= new Scanner(System.in);
+       
+        for(int i=0;i<4;i++) {
+         
+       
+       System.out.print("1st/2nd/3rd/4th card of player four?");
+       playerfourcards.add(in4.next());
+   
+    
+   }    
+     
+     
+      System.out.println("The hand of player four is:" +playerfourcards);  
+   
+   
+      
+       ArrayList<String> communitycards=new ArrayList<String>();
+       
+       Scanner in5= new Scanner(System.in);
+       
+        for(int i=0;i<4;i++) {
+         
+       
+       System.out.print("What are the 1st/2nd/3rd/4th community cards?");
+       communitycards.add(in5.next());
+   
+    
+   }    
+     
+     
+      System.out.println("The community cards are:" +communitycards);  
+   
+  
+      
+      
+      
+      Scanner in6=new Scanner(System.in);
+      
+  
+      
+      
+      
+        allcards.removeAll(playeronecards);
+        allcards.removeAll(playertwocards);
+        allcards.removeAll(playerthreecards);
+        allcards.removeAll(playerfourcards);
+        allcards.removeAll(communitycards); 
+          
+      System.out.println("The remaining cards in the deck are"+allcards);
+      
+      
+      
+       System.out.println("Which card do you want to draw next? \n");
+       
+       String DesiredCard=in6.nextLine();
+      
+ 
+      System.out.println("Your desired Card is(this value but any suit):"+DesiredCard);
+   
+      
+      double NumberOfDesiredCardsLeft=0;
+    
+     
+    
+     
+       for(int p=0;p<allcards.size();p++){
+     
+     if(allcards.get(p).contains(DesiredCard)){
+         
+           
+      
+    NumberOfDesiredCardsLeft=NumberOfDesiredCardsLeft+1;
+              
+          }else{
+           
+           
+                  
+            NumberOfDesiredCardsLeft=NumberOfDesiredCardsLeft;
+            
+            
+          }
+       
+    
+      
+      
+  
+   
+    
+  }
+     
+      double ChanceOfDrawing;
+    
+      ChanceOfDrawing = 100*(NumberOfDesiredCardsLeft/32);
+      
+      System.out.printf("The chance of drawing your desired card %.2f percent",ChanceOfDrawing);
+      
+       
+       
+       
+        
+        
+        
+    } 
+
+}
+        
